@@ -1,1 +1,7 @@
-volumes_from: 
+version: "3"
+services: 
+  buildapp:
+    build: docfile
+  web:
+    image: fbrx/tomcat
+   
