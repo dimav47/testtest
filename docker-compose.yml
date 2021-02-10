@@ -11,8 +11,8 @@ services:
   web:
     image: tomcat
     volumes:
-      - type: bind
-        source: /var/lib/docker/volumes/home_openopen/_data
+      - type: volume
+        source: openopen
         target: /usr/local/tomcat/webapps
     ports:
       - "8080:8080"
