@@ -2,6 +2,12 @@ version: "3"
 services: 
   buildapp:
     build: docfile
+  volumes: 
+    type: volume
+        - "/home/shara:/usr/local/tomcat/webapps"
   web:
     image: fbrx/tomcat
-   
+  volumes: 
+    type: bind
+      source: /home/shara
+      target: /usr/local/tomcat/webapps
