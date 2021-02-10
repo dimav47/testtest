@@ -4,16 +4,16 @@ services:
     build: docfile
     volumes:
       - type: volume
-          source: openopen
-          target: /usr/local/tomcat/webapps
+        source: openopen
+        target: /usr/local/tomcat/webapps
       
 
   web:
     image: tomcat
     volumes:
       - type: bind
-          source: openopen
-          target: /usr/local/tomcat/webapps
+        source: openopen
+        target: /usr/local/tomcat/webapps
     ports:
       - "8080:8080"
 volumes:
