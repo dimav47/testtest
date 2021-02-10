@@ -3,11 +3,14 @@ services:
   buildapp:
     build: docfile
     volumes: 
-      - type: bind
-        source: /home/shara
+      - type: volume
+        source: openopen
         target: /usr/local/tomcat/webapps
+      
 
   web:
     image: tomcat
-    volumes: 
-      - "/home/shara:/usr/local/tomcat/webapps"
+    ports:
+      - "8080:8080"    
+volumes:
+  openopen    
